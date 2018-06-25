@@ -1,5 +1,5 @@
+# coding=UTF-8
 from django.contrib import admin
-
 # Register your models here.
 
 from .models import BookInfo  # python3 需要 .models 这样引入  python2 直接 models

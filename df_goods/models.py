@@ -1,5 +1,7 @@
+# coding=UTF-8
 from django.db import models
 from tinymce.models import HTMLField
+# -*- coding: utf-8 -*
 # Create your models here.
 
 # Create your models here.
@@ -9,7 +11,7 @@ class TypeInfo(models.Model):
     isDelete = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.ttitle
+        return self.ttitle.encode('utf-8')
 #商品
 class GoodsInfo(models.Model):
     gtitle = models.CharField(max_length=20)
@@ -31,5 +33,5 @@ class GoodsInfo(models.Model):
     gtype = models.ForeignKey(TypeInfo)
 
     def __str__(self):
-        return self.gtitle
+        return self.gtitle.encode('utf-8')
 

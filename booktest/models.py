@@ -1,5 +1,5 @@
+# coding=UTF-8
 from django.db import models
-
 
 # Create your models here.
 # class BookInfoManager(models.Manager):
@@ -23,6 +23,7 @@ class BookInfo(models.Model):
     bcommet = models.IntegerField(default=0)
     isDelete=models.BooleanField(default=False)
 
+    # -*- coding: utf-8 -*
     # books = models.Manager() 为模型指定管理器，如果指定了，则编译器不再为模型生成 objects 则BookInfo.objects 将发生错误
     # books=BookInfoManager()#指定管理器，需要为模型拓展方法时 调用：book=BookInfo.books.create_book("abc",datetime(1980,1,1)) 保存：book.save()
     # isDelete = models.BooleanField(default=False)
